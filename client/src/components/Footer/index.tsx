@@ -22,10 +22,7 @@ const Footer: React.FC = () => {
         </button>
       )}
       {/* These lines should ALWAYS render */}
-      <div className="footer-content">
-        <p>© 2025 Legacy League. All rights reserved.</p>
-        <p>The Ultimate NBA Match Ups</p>
-      </div>
+      
     </footer>
   );
 };
