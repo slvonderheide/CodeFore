@@ -1,0 +1,349 @@
+/* ─────────────────────────────────────────────────────────────── */
+/* Global & page background */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #1e3a8a, #9333ea);
+}
+
+/* ─────────────────────────────────────────────────────────────── */
+/* 1) HERO HEADER SHRINKDOWN */
+.flanked-header {
+  /* optional: cap height of your flanked image section */
+  max-height: 180px;
+  overflow: hidden;
+  /* tighten padding under hero */
+  padding-bottom: 0.5rem !important;
+}
+
+.home-page.simulator {
+  padding-top: 0px;
+}
+
+.home-header {
+  /* bring header text closer to buttons */
+  margin-bottom: 0.5rem !important;
+  text-align: center !important;
+}
+
+/* bring the Meet The Legends button up a bit */
+.home-header .btn-info,
+.home-header .btn-light {
+  margin-bottom: 0.5rem !important;
+}
+
+/* collapse the headline to one line so it wastes less vertical space */
+.home-header .display-4 {
+  white-space: nowrap;
+  font-size: 3rem;  /* adjust as needed to fit */
+  padding-bottom: 0.5rem !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  margin-left: -10rem; /* Adjust this value until it looks centered */
+}
+
+/* ─────────────────────────────────────────────────────────────── */
+/* 2) CONTENT SECTION UPWARD SHIFT */
+.content-section {
+  /* less top padding before your MainLogin */
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.simulate-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* sit at top of its container */
+  padding-top: 0 !important;
+}
+
+/* if you need to pull the simulator box even higher: */
+.main-login-wrapper.simulator {
+  margin-top: 1rem !important;
+  align-self: flex-start !important;
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Glowing red border + rounded corners on simulator box */
+.main-login-wrapper.simulator {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  border-radius: 16px;
+  overflow: visible;
+  padding: 1rem;
+  width: 150%;
+}
+
+/* glow pseudo-element */
+.main-login-wrapper.simulator::before {
+  content: "";
+  position: absolute;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  border-radius: inherit;
+  box-shadow:
+    0 0 8px rgba(255,0,0,0.7),
+    0 0 16px rgba(255,0,0,0.5),
+    0 0 24px rgba(255,0,0,0.3);
+  animation: redGlow 2s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes redGlow {
+  from {
+    box-shadow:
+      0 0 4px rgba(255,0,0,0.5),
+      0 0 12px rgba(255,0,0,0.4),
+      0 0 20px rgba(255,0,0,0.2);
+  }
+  to {
+    box-shadow:
+      0 0 12px rgba(255,0,0,0.9),
+      0 0 24px rgba(255,0,0,0.7),
+      0 0 32px rgba(255,0,0,0.5);
+  }
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Transparent inner container */
+.login-container.simulator {
+  background-color: transparent;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: none;
+}
+.login-container.simulator h3 {
+  background-color: transparent;
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Custom dropdown style */
+.ml-2.p-2.border.rounded {
+  appearance: none;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5em 2.5em 0.5em 1em;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23666' d='M2 5L0 0h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+  background-size: .65em auto;
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .15s ease,
+    background-image .25s ease;
+}
+.ml-2.p-2.border.rounded:hover,
+.ml-2.p-2.border.rounded:focus {
+  border-color: #ff416c;
+  box-shadow: 0 0 8px rgba(255,65,108,0.4);
+  transform: scale(1.02);
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23ff416c' d='M2 5L0 0h4z'/%3E%3C/svg%3E");
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Neon red text on home header */
+.home-header .display-4,
+.home-header .lead {
+  color: #fff;
+  -webkit-text-stroke: 1px #e53e3e;
+  text-stroke: 1px #e53e3e;
+  text-shadow:
+    0 0 2px  #e53e3e,
+    0 0 6px  #f56565,
+    0 0 12px #feb2b2;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.2em 0.5em;
+  border-radius: 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.home-header .display-4:hover {
+  animation: neon-pulse-red 1.5s infinite alternate ease-in-out;
+}
+@keyframes neon-pulse-red {
+  from {
+    text-shadow:
+      0 0 4px  #e53e3e,
+      0 0 12px #f56565,
+      0 0 20px #feb2b2;
+  }
+  to {
+    text-shadow:
+      0 0 8px  #e53e3e,
+      0 0 16px #f56565,
+      0 0 24px #feb2b2;
+  }
+}
+
+/* “Meet The Legends” gold button */
+.text-center.mt-4 .btn-info {
+  /* GOLD GRADIENT + PILL SHAPE */
+  background: linear-gradient(45deg, #FFD700, #DAA520);
+  color: #fff;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;    /* remove underline */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.text-center.mt-4 .btn-info:hover {
+  background: linear-gradient(45deg, #DAA520, #FFD700);
+  transform: scale(1.05);
+  box-shadow:
+    0 0 8px  rgba(255,215,0,0.7),
+    0 0 16px rgba(255,215,0,0.5);
+}
+
+.text-center.mt-4 .btn-info:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 0 4px rgba(255,215,0,0.7);
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Modal overlay + pop */
+.modal-overlay {
+  position: fixed; top:0; left:0;
+  width:100vw; height:100vh;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px) brightness(0.6);
+  display:flex; align-items:center; justify-content:center;
+  z-index:9999;
+}
+@keyframes modalPop {
+  0% { opacity:0; transform: scale(0.8) }
+  100% { opacity:1; transform: scale(1) }
+}
+.modal-overlay > .modal-content {
+  background:
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url('https://static01.nyt.com/images/2017/04/26/sports/MARIUS2/MARIUS2-articleLarge.jpg') center/cover no-repeat;
+  padding:2rem;
+  border-radius:20px;
+  box-shadow:
+    0 8px 16px rgba(0,0,0,0.2),
+    0 0 30px rgba(255,65,108,0.5);
+  border:4px solid transparent;
+  border-image: linear-gradient(45deg,#ff416c,#ff4b2b,#ff416c) 1;
+  animation: modalPop .3s ease-out;
+  max-width:600px; width:90%; text-align:center;
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Player1 ▶ VS ▶ Player2 row */
+.flex.flex-col.gap-4.mb-4 {
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center;
+  justify-content:center;
+  gap:1.5rem;
+  margin-bottom:1rem;
+}
+.flex.flex-col.gap-4.mb-4 label {
+  display:flex; flex-direction:column; align-items:center; margin:0;
+}
+.vs-text {
+  font-size:3rem; font-weight:700; color:#e53e3e;
+  margin:0 .75rem; line-height:1; display:inline-block;
+  align-self:center; animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { transform:scale(1) }
+  50%     { transform:scale(1.2) }
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Dropdown & inputs grid */
+select {
+  margin-top:8px; padding:10px;
+  font-size:1rem; border-radius:8px;
+  border:1px solid #ccc; min-width:160px;
+}
+
+/* “Add New Player” grid */
+.grid { display:grid }
+.grid-cols-2 { grid-template-columns:repeat(2,1fr) }
+.gap-2 { gap:.5rem }
+.mt-6 { margin-top:1.5rem }
+
+/* input fields */
+input {
+  padding:8px; border:1px solid #ccc;
+  border-radius:6px; font-size:1rem;
+  width:100%; box-sizing:border-box;
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Base button styles */
+button {
+  background:linear-gradient(to right,#ff416c,#ff4b2b);
+  color:white; padding:12px 24px; border:none;
+  border-radius:30px; cursor:pointer;
+  font-size:1rem; font-weight:600;
+  transition:transform .2s, background .3s;
+}
+button:hover {
+  transform:scale(1.05);
+  background:linear-gradient(to right,#ff4b2b,#ff416c);
+}
+
+/* center the main action buttons */
+.simulate-button,
+.add-player-button,
+.modal-button {
+  display:block; margin:20px auto 0;
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* Created Players list & “pill” styling on edit/delete */
+.mt-6 > ul {
+  list-style:none; padding:0; margin:0;
+}
+.mt-6 > ul > li {
+  display:flex; justify-content:space-between; align-items:center;
+  background:#fff; border:1px solid #e2e8f0; border-radius:8px;
+  padding:.75rem 1rem; margin-bottom:.75rem;
+  transition:background .2s;
+}
+.mt-6 > ul > li:hover {
+  background:#f7fafc;
+}
+.mt-6 ul li button {
+  background:linear-gradient(to right,#ff416c,#ff4b2b)!important;
+  color:white!important; padding:12px 24px!important;
+  border:none!important; border-radius:30px!important;
+  font-size:1rem!important; font-weight:600!important;
+  cursor:pointer!important; margin:0 .5rem!important;
+  display:inline-block!important;
+  transition:transform .2s ease, background .3s ease!important;
+}
+.mt-6 ul li button:hover {
+  transform:scale(1.05)!important;
+  background:linear-gradient(to right,#ff4b2b,#ff416c)!important;
+}
+
+/* ───────────────────────────────────────────────────────── */
+/* simulate-wrapper to center horizontally */
+.simulate-wrapper {
+  display:flex; justify-content:center; align-items:flex-start;
+  padding:0 !important; min-height:100vh; position:relative; z-index:1;
+}

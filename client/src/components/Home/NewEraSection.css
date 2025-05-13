@@ -1,0 +1,56 @@
+.legends-circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 2rem;
+}
+
+.circle-slot {
+  position: relative;
+  width: 300px; /* Increase container size */
+  text-align: center;
+  color: white;
+  font-size: 1.5rem; /* Increase font size for text */
+  margin-bottom: 3rem; /* Add spacing between images */
+  transition: transform 0.3s;
+}
+
+.circle-slot img {
+  width: 600px; /* Massive image size */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem; /* Add spacing below the image */
+}
+
+/* Circular positioning */
+.slot1 { top: 0; left: 50%; transform: translate(-50%, 0) rotate(-5deg); }
+.slot2 { top: 20%; left: 90%; transform: translate(-50%, -50%) rotate(8deg); }
+.slot3 { top: 60%; left: 85%; transform: translate(-50%, -50%) rotate(-4deg); }
+.slot4 { top: 75%; left: 25%; transform: translate(-50%, -50%) rotate(6deg); }
+.slot5 { top: 25%; left: 10%; transform: translate(-50%, -50%) rotate(-6deg); }
+
+.circle-slot:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  z-index: 2;
+}
+
+.legends-wrapper2 {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 2rem auto; /* Center the wrapper on the page */
+}
+
+.tracking-image2 {
+  position: fixed; /* Fix the image to the viewport */
+  top: 10vh;
+  padding-left: 1000px;
+  right: 0; /* Align the image to the right side of the page */
+  width: auto; 
+  height: 75vh;
+  object-fit: cover; /* Ensure the image scales proportionally to cover the background */
+  z-index: -1; /* Push the image to the back */
+  opacity: 0.6; /* Make the image fully visible */
+}
+
+
