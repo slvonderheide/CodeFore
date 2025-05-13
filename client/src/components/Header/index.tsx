@@ -19,11 +19,10 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Legacy League</h1>
+            <h1 className="m-0">CodeFore Solutions</h1>
           </Link>
           <p className="m-0">
-            Who's the real GOAT? Challenge your friends, family, and coworkers
-            to simulate the greatest NBA matchups!
+            
           </p>
         </div>
 
