@@ -1,0 +1,50 @@
+/* CSS/home.css */
+
+/* Global Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero Banner (Welcome Section) */
+.hero-banner {
+  background-image: url('/images/golf-fairway.jpg'); /* Make sure this image exists */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #3B7A57; /* fallback */
+}
+
+
+/* Section Buttons */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Cards / Services */
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  background-color: white;
+  text-align: center;
+}
+
+/* Portfolio Placeholder */
+.bg-gray-200 {
+  background: linear-gradient(135deg, #A9CBA4 0%, #E5D9C5 100%);
+  color: #3B7A57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Add a decorative divider */
+.divider {
+  height: 2px;
+  background: url('/images/flag-divider.svg') center center no-repeat;
+  background-size: contain;
+  margin: 2rem 0;
+}
