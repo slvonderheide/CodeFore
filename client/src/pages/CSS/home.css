@@ -5,16 +5,29 @@
 
 body {
   font-family: 'Playfair Display', serif;
+  background-color: #3B7A57;
+  background-image: url('/images/golf-fairway.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+
+.hero-section {
+  background: transparent; /* override unwanted Tailwind bg if applied */
 }
 
 /* Hero Banner (Welcome Section) */
 .hero-banner {
-  background-image: url('/images/golf-fairway.jpg'); /* Make sure this image exists */
+  background-image: url('/images/golf-fairway.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #3B7A57; /* fallback */
+  background-color: #3B7A57; /* fallback if image fails */
+ 
 }
+
 
 
 /* Section Buttons */

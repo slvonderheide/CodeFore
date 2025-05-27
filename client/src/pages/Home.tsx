@@ -1,30 +1,31 @@
-import React from 'react';
+//import React from 'react';
 import './CSS/home.css'
 
 const HomePage = () => {
-  return (
-    <div className="font-sans text-gray-800">
-      <div className="hero-banner text-white py-24 px-5 text-center">
-        {/* Hero Section Content */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">Welcome to CodeFore</h1>
-        <p className="text-xl md:text-2xl mb-6">Your partner for smart, clean, and competitive web solutions.</p>
-        <div className="space-x-4">
-          <button className="bg-white text-green-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Get Started</button>
-          <button className="bg-white text-green-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Contact Us</button>
-        </div>
+return (
+  <>
+    <div className="hero-banner >
+    <Header/>
+     <div text-white py-24 px-5 text-center">
+      <h1 className="text-5xl md:text-7xl font-bold mb-4">Welcome to CodeFore</h1>
+      <p className="text-xl md:text-2xl mb-6">Your partner for smart, clean, and competitive web solutions.</p>
+      <div className="space-x-4">
+        <button className="bg-white text-green-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Get Started</button>
+        <button className="bg-white text-green-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Contact Us</button>
       </div>
+    </div>
 
-      <section className="hero-section text-white py-20 px-5 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Smart Design. Clean Code. Competitive Results.</h1>
-        <p className="text-lg md:text-xl mb-6">Websites crafted with precision — where development meets design.</p>
-        <div className="space-x-4">
-          <button className="bg-white text-green-600 px-6 py-2 rounded font-semibold hover:bg-gray-100">View Our Work</button>
-          <button className="bg-white text-green-600 px-6 py-2 rounded font-semibold hover:bg-gray-100">Get a Free Quote</button>
-        </div>
-      </section>
+    <section className=" text-white py-20 px-5 text-center">
+      <h1 className="text-4xl md:text-6xl font-bold mb-4">Smart Design. Clean Code. Competitive Results.</h1>
+      <p className="text-lg md:text-xl mb-6">Websites crafted with precision — where development meets design.</p>
+      <div className="space-x-4">
+        <button className="bg-white text-green-600 px-6 py-2 rounded font-semibold hover:bg-gray-100">View Our Work</button>
+        <button className="bg-white text-green-600 px-6 py-2 rounded font-semibold hover:bg-gray-100">Get a Free Quote</button>
+      </div>
+    </section>
 
       {/* About Section */}
-      <section className="hero-section max-w-4xl mx-auto text-center">
+      <section className=" max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Who We Are</h2>
         <p className="text-lg">At CodeFore, we build high-performing websites with the precision of a perfect swing. We blend clean front-end design with custom backend development to help brands win online.</p>
       </section>
@@ -74,7 +75,7 @@ const HomePage = () => {
       <footer className="hero-section text-white text-center py-6">
         <p>&copy; {new Date().getFullYear()} CodeFore. All rights reserved.</p>
       </footer>
-    </div>
+  </>
   );
 };
 
