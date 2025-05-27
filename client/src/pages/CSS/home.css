@@ -6,7 +6,7 @@
 body {
   font-family: 'Playfair Display', serif;
   background-color: #3B7A57;
-  background-image: url('/images/golf-fairway.jpg');
+  /* //background-image: url('/images/golf-fairway.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

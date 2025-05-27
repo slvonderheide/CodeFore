@@ -1,0 +1,14 @@
+/* Header */
+.tight-header {
+  background-color: white;
+  border: 10px solid green;
+  padding: 1rem 0;
+}
+
+/* Header Text Color Override */
+.tight-header h1,
+.tight-header p,
+.tight-header a,
+.tight-header .btn {
+  color: black !important;
+}

@@ -15,15 +15,16 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="transparent-footer">
-      {/* Only this button is conditional */}
-      {location.pathname !== '/' && (
-        <button className="btn btn-dark mb-3" onClick={handleGoBack}>
-          &larr; Go Back
-        </button>
-      )}
-      {/* These lines should ALWAYS render */}
-      
-    </footer>
+  {location.pathname !== '/' && (
+    <button className="btn btn-dark mb-3" onClick={handleGoBack}>
+      &larr; Go Back
+    </button>
+  )}
+
+  {/* Add this line */}
+  <p className="m-0">&copy; {new Date().getFullYear()} CodeFore Solutions. All rights reserved.</p>
+</footer>
+
   );
 };
 
